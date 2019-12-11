@@ -32,9 +32,8 @@ export class BienvenidaComponent implements OnInit {
       console.log(respuesta);
     });
 
-
     this.comicDTO = new ComicDTO();    
-    this.comicDTO.nombre = "BATAMAN";
+    this.comicDTO.nombre = "BATMAN";
     this.comicDTO.editorial = "perro";
     this.comicDTO.tematica = "no se";
     this.comicDTO.coleccion = "norma";
@@ -44,19 +43,19 @@ export class BienvenidaComponent implements OnInit {
     this.comicDTO.cantidad = 1;
     this.comicDTO.tematica = "AVENTURAS"
     this.comicDTO.autores = "cindyDiego";
-    this.comicDTO.color = true;
-
-    
+    this.comicDTO.color = true;    
     this.ejemploService.crearComic(this.comicDTO).subscribe(respuesta => {
       console.log(respuesta);
     });
-
-   
   }
 
   public ejecucionEventoClick( parametroEvento : any, numero : number ) : void {
-    alert("Hola: " + parametroEvento + ' ' + numero);
-    
+    alert("Hola: " + parametroEvento + ' ' + numero);    
+  }
+  
+  private obteneYValor(opcionRetorno : number) : void{
+  	 let test = "null";
+  	 //let resultado = test!==null) ? true: false;  	 
   }
 
 }
